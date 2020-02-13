@@ -1,0 +1,47 @@
+{
+  "code": 200,
+  "summary": "success",
+  "data": [
+      {
+          "codeName": "LSV1",
+          "sensorFunc": "�ⳤ",
+          "tableName": "0��˿��",
+          "description": "��ע",
+          "type": "LS",
+          "imgFile": "http://localhost:3000/uploads/img/LSV1.jpg"
+      },
+      {
+          "sensorFunc": "����",
+          "type": "LS",
+          "description": "��ע",
+          "tableName": "0��˿��",
+          "codeName": "LSV6",
+          "imgFile": "http://localhost:3000/uploads/img/LSV6.jpg"
+      },
+      {
+          "sensorFunc": "����",
+          "type": "LS",
+          "description": "��ע",
+          "codeName": "LSV7",
+          "tableName": "0��˿��",
+          "imgFile": "http://localhost:3000/uploads/img/LSV7.jpg"
+      },
+      {
+          "tableName": "0��˿��",
+          "description": "��ע",
+          "codeName": "LSV2",
+          "sensorFunc": "����",
+          "type": "LS",
+          "imgFile": "http://localhost:3000/uploads/img/LSV2.jpg"
+      },
+      {
+          "tableName": "0��˿��",
+          "description": "��ע",
+          "codeName": "LSV3",
+          "type": "LS",
+          "sensorFunc": "����",
+          "imgFile": "http://localhost:3000/uploads/img/LSV3.jpg"
+      }
+    ]
+}
+

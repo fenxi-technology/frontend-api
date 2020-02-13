@@ -1,0 +1,63 @@
+<div class="registrysensor-dialog">
+  <!-- <form nz-form [formGroup]="validateForm"> -->
+  <form [formGroup] = "validateForm">
+    <nz-form-item>
+      <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="imgFile">图片</nz-form-label>
+      <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="图片不能为空!">
+        <!-- <input id="tableName" type="file" style="display:none;" />
+        <input type="button" value="选择图片" onclick="document.getElementById('tableName').click();" /> -->
+        <!-- <input nz-input formControlName="tableName" id="tableName" />
+        <button nz-button nzSize="medium" style="margin-right: 10px;" [nzType]="'primary'" (click)="openPath()">选择图片</button> -->
+
+        <input type="file" name="imgFile" (change)="onFileSelect($event)" />
+        <!-- <input id="file-input" type="file" style="display:none;"/>
+        <button onclick="document.getElementById('file-input').click();">选择图片</button> -->
+
+        <!-- <input id="myForm" type="file" name="file" (change)="postMethod($event.target.files)"> -->
+
+      </nz-form-control>
+    </nz-form-item>
+
+    <nz-form-item>
+      <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="tableName" nzRequired>表名</nz-form-label>
+      <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="表名不能为空!">
+        <input nz-input  id="tableName" formControlName="tableName" (change)="onChanged($event)" />
+      </nz-form-control>
+    </nz-form-item>
+
+    <nz-form-item>
+      <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="codeName" nzRequired>传感器名字</nz-form-label>
+      <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="传感器名字不能为空!">
+        <input nz-input  id="codeName" formControlName="codeName" (change)="onChanged($event)"/>
+      </nz-form-control>
+    </nz-form-item>
+
+    <nz-form-item>
+      <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="sensorFunc" nzRequired>传感器功能</nz-form-label>
+      <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="传感器功能不能为空!">
+        <input nz-input id="sensorFunc" formControlName="sensorFunc" (change)="onChanged($event)"/>
+      </nz-form-control>
+    </nz-form-item>
+
+    <nz-form-item>
+      <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="type" nzRequired>类型</nz-form-label>
+      <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="类型不能为空!">
+        <input nz-input id="type" formControlName="type" (change)="onChanged($event)"/>
+      </nz-form-control>
+    </nz-form-item>
+
+    <nz-form-item>
+      <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="description" nzRequired>描述</nz-form-label>
+      <nz-form-control [nzSm]="14" [nzXs]="24" >
+        <input nz-input  id="description" formControlName="description" (change)="onChanged($event)"/>
+      </nz-form-control>
+    </nz-form-item>
+  <!-- </form> -->
+  <div class="edituser-dialog-footer">
+    <button nz-button nzSize="large" style="margin-right: 10px;" [nzType]="'default'"
+      (click)="handleCancel()">取消</button>
+    <!-- <button type="submit" nz-button nzSize="large" [nzType]="'primary'" (click)="handleOk()">确认修改</button> -->
+    <button nz-button nzSize="large" [nzType]="'primary'" (click)="handleOK()">确认注册</button>
+  </div>
+</form>
+</div>

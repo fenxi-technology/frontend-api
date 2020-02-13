@@ -1,0 +1,36 @@
+<div class="adduser-dialog">
+  <form nz-form [formGroup]="validateForm">
+    <nz-form-item>
+      <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="userName">用户名</nz-form-label>
+      <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="用户名不能为空!">
+        <input nz-input formControlName="userName" id="userName" />
+      </nz-form-control>
+    </nz-form-item>
+
+    <nz-form-item>
+      <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="position" nzRequired>职位</nz-form-label>
+      <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="职位不能为空!">
+        <input nz-input  id="position" formControlName="position" />
+      </nz-form-control>
+    </nz-form-item>
+
+    <nz-form-item>
+      <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="auth" nzRequired>权限</nz-form-label>
+      <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="权限不能为空!">
+        <input nz-input id="auth" formControlName="auth" />
+      </nz-form-control>
+    </nz-form-item>
+
+    <nz-form-item>
+      <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="description" nzRequired>描述</nz-form-label>
+      <nz-form-control [nzSm]="14" [nzXs]="24" >
+        <input nz-input  id="description" formControlName="description" />
+      </nz-form-control>
+    </nz-form-item>
+  </form>
+  <div class="adduser-dialog-footer">
+    <button nz-button nzSize="large" style="margin-right: 10px;" [nzType]="'default'"
+      (click)="handleCancel()">取消</button>
+    <button nz-button nzSize="large" [nzType]="'primary'" (click)="handleOk()">确认修改</button>
+  </div>
+</div>
