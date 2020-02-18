@@ -51,20 +51,20 @@ export class DaoService {
     return this.http.get<IOneResponse>(this._url_query, {params});
   }
 
-  deleteSensor(codeName: string) {
+  deleteSensor(codeName: string): Observable<IOneResponse> {
     // http://localhost:3001/sensor/del?sensorname=LSV2
     console.log(codeName);
-
     const httpParams = new HttpParams().set('sensorname', codeName);
     const options = {params: httpParams};
-    this.http.delete(this._url_del, options).subscribe(
-      data => {
-        console.log('DELETE Request is successful ', data);
-      },
-      error => {
-        console.log('Error', error);
-      }
-    );
+    return this.http.delete<IOneResponse>(this._url_del, options);
+    // this.http.delete(this._url_del, options).subscribe(
+    //   data => {
+    //     console.log('DELETE Request is successful ', data);
+    //   },
+    //   error => {
+    //     console.log('Error', error);
+    //   }
+    // );
   }
 
 
